@@ -1,0 +1,76 @@
+{
+  "name": "docker-composer",
+  "description": "Visual Docker Compose editor",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Bruno Piedade",
+    "email": "up201505668@fe.up.pt",
+    "url": "https://your-website.com"
+  },
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "Docker Composer",
+    "copyright": "Copyright © 2020 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extends": null
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "electron-is-dev": "^1.2.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "mxgraph": "^4.1.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-infinite-scroller": "^1.2.4",
+    "react-scripts": "3.4.1",
+    "react-split-pane": "^0.1.91",
+    "script-loader": "^0.7.2"
+  },
+  "homepage": "./",
+  "main": "build/electron.js",
+  "scripts": {
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "npm run-script build",
+    "electron-pack": "electron-builder build -l"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.14",
+    "@rescripts/rescript-env": "^0.0.12",
+    "concurrently": "^5.1.0",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "typescript": "^3.8.3",
+    "wait-on": "^4.0.2"
+  }
+}
