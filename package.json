@@ -68,7 +68,7 @@
     "@rescripts/cli": "^0.0.14",
     "@rescripts/rescript-env": "^0.0.12",
     "concurrently": "^5.1.0",
-    "electron": "^8.2.3",
+    "electron": "^15.5.5",
     "electron-builder": "^22.5.1",
     "typescript": "^3.8.3",
     "wait-on": "^4.0.2"
